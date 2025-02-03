@@ -1,0 +1,21 @@
+{
+    "name": "font-weight",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@types/gsap": "^1.20.2",
+        "typescript": "~5.6.2",
+        "vite": "^6.0.5"
+    },
+    "dependencies": {
+        "@studio-freight/lenis": "^1.0.42",
+        "gsap": "^3.12.7",
+        "sass": "^1.83.4"
+    }
+}

@@ -1,0 +1,89 @@
+$primary-font: 'Inter Variable',
+sans-serif;
+$heading-font: 'Martian Mono',
+monospace;
+$text-color: #333;
+@mixin section-style {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    contain: strict;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+    height: 100%;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    overflow-y: scroll;
+    height: auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 90vw;
+    margin: 0 auto;
+    will-change: transform;
+}
+
+h1,
+h2 {
+    font-family: $heading-font;
+    font-variation-settings: 'wght' 100;
+    line-height: 1.2;
+    span {
+        display: inline-block;
+        will-change: transform, font-variation-settings;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.header-section {
+    @include section-style;
+}
+
+.content-section {
+    @include section-style;
+    background: #ffffff;
+    perspective: 1000px;
+    p {
+        font-family: $primary-font;
+        font-size: 1.4rem;
+        line-height: 2;
+        color: $text-color;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+    span {
+        display: block;
+        overflow: hidden;
+        padding: 2px 0;
+        will-change: transform, font-variation-settings;
+        backface-visibility: hidden;
+    }
+}
