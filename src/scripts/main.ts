@@ -2,7 +2,6 @@ import { gsap, QuickToFunc } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 type SpanData = {
